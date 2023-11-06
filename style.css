@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+}
+span, a, label{
+    display: inline-block;
+    font-family: 'Bad Script', cursive;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
+    background: #111;
+    overflow: hidden;
+}
+h2 {
+    display: flex;
+    color: transparent;
+    font-size: 10vw;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%,-80%);
+}
+.h2 {
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translateX(-50%) translateY(-55%);
+}
+h2 span {
+    animation: anim 3s linear infinite;
+    animation-delay: calc(0.2s * var(--i));
+}
+@keyframes anim {
+    0% {
+        color: white;
+        filter: blur(2px) hue-rotate(0deg);
+        text-shadow: 0 0 10px #00b3ff,
+        0 0 20px #00b3ff,
+        0 0 40px #00b3ff,
+        0 0 80px #00b3ff,
+        0 0 120px #00b3ff,
+        0 0 200px #00b3ff,
+        0 0 300px #00b3ff,
+        0 0 400px #00b3ff;
+    }
+    30%,70% {
+        color: white;
+        filter: blur(2px) hue-rotate(360deg);
+        text-shadow: 0 0 10px #00b3ff,
+        0 0 20px #00b3ff,
+        0 0 40px #00b3ff,
+        0 0 80px #00b3ff,
+        0 0 120px #00b3ff,
+        0 0 200px #00b3ff,
+        0 0 300px #00b3ff,
+        0 0 400px #00b3ff;
+    }
+    100% {
+        color: transparent;
+        box-shadow: none;
+        filter: blur(2px) hue-rotate(0deg);
+    }
+}
